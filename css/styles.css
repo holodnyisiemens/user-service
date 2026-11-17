@@ -1,0 +1,187 @@
+:root {
+  --bg: #f4f6fb;
+  --card: #ffffff;
+  --primary: #3b5bdb;
+  --primary-dark: #364fc7;
+  --text: #212529;
+  --muted: #868e96;
+  --border: #dee2e6;
+  --error: #e03131;
+  --success: #2f9e44;
+  --radius: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+}
+
+.brand {
+  font-weight: 700;
+  color: var(--primary);
+}
+
+#nav {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+#nav a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+#nav a:hover {
+  text-decoration: underline;
+}
+
+#nav .nav-user {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+#app {
+  max-width: 520px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+form label {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+form input {
+  display: block;
+  width: 100%;
+  margin-top: 4px;
+  padding: 10px 12px;
+  font-size: 14px;
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+form input:focus {
+  outline: 2px solid var(--primary);
+  border-color: transparent;
+}
+
+form input:disabled {
+  background: #f1f3f5;
+  color: var(--muted);
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+  color: #fff;
+  background: var(--primary);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--primary-dark);
+}
+
+.link-button {
+  width: auto;
+  padding: 0;
+  background: none;
+  color: var(--primary);
+  font-size: inherit;
+}
+
+.link-button:hover {
+  background: none;
+  text-decoration: underline;
+}
+
+.form-message {
+  min-height: 18px;
+  font-size: 14px;
+}
+
+.form-message:empty {
+  display: none;
+}
+
+.form-message.error {
+  color: var(--error);
+}
+
+.form-message.success {
+  color: var(--success);
+}
+
+.hint {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.dev-hint {
+  background: #fff9db;
+  border: 1px solid #ffe066;
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
+.switch {
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.tab {
+  padding: 8px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.tab.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
